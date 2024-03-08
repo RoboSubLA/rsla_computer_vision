@@ -23,6 +23,11 @@ sources:https://github.com/roboflow/notebooks/blob/main/notebooks/train-yolov7-o
 ## Using TrainYOLOV7 in Google Colab
 download file and open on YOUR google colab account
 https://store.augmentedstartups.com/605618c8-d8c8-4a25-be71-852308115520
+
+## Running YOLOV7 on custom trained dataset 
+There are many ways to run but using google colab is the simplest.
+You can run the same command on your UBUNTU terminal, assuming you have CUDA, PYTHON3, your weights, and test images installed on your local device
+
 ### BEFORE YOU RUN THIS CODE
 make sure you are using the correct path from YOUR trained model and testing on your uploaded images from YOUR path in your google drive 
 ```!python detect.py --weights /content/gdrive/MyDrive/yolov7/runs/train/exp2/weights/best.pt --conf 0.1 --source /content/gdrive/MyDrive/yolov7/Trash-5/test/images```
