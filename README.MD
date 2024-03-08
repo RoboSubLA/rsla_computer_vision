@@ -18,6 +18,7 @@ Now that we have our images and annotations added, we can Generate a Dataset Ver
 ## Step 5: Exporting dataset
 Once the dataset version is generated, we have a hosted dataset we can load directly into our notebook for easy training. Click Export and select the YOLO v5 PyTorch dataset format.
 ![](https://camo.githubusercontent.com/bda73b306551a545469d21838128066bb42d3e9cf403b756aac2620ed90a840c/68747470733a2f2f6d656469612e726f626f666c6f772e636f6d2f707265706172696e672d637573746f6d2d646174617365742d6578616d706c652f6578706f72742e6769663f696b2d73646b2d76657273696f6e3d6a6176617363726970742d312e342e33267570646174656441743d31363732393433333133373039)
+sources:https://github.com/roboflow/notebooks/blob/main/notebooks/train-yolov7-object-detection-on-custom-data.ipynb
 
 ## Using TrainYOLOV7 in Google Colab
 download file and open on YOUR google colab account
