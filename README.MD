@@ -25,5 +25,5 @@ download file and open on YOUR google colab account
 https://store.augmentedstartups.com/605618c8-d8c8-4a25-be71-852308115520
 ### BEFORE YOU RUN THIS CODE
 make sure you are using the correct path from YOUR trained model and testing on your uploaded images from YOUR path in your google drive 
-```!python detect.py --weights /content/gdrive/MyDrive/yolov7/runs/train/exp2/weights/epoch_054.pt --conf 0.1 --source /content/gdrive/MyDrive/yolov7/Trash-5/test/images```
+```!python detect.py --weights /content/gdrive/MyDrive/yolov7/runs/train/exp2/weights/best.pt --conf 0.1 --source /content/gdrive/MyDrive/yolov7/Trash-5/test/images```
 
