@@ -64,7 +64,7 @@ Desktop Install for ROS, RViz, demos, tutorials \
 
 ### Environment setup
 Replace ".bash" with your shell if you're not using bash\
-Possible values are: setup.bash, setup.sh, setup.zsh
+Possible values are: setup.bash, setup.sh, setup.zsh\
 ```source /opt/ros/humble/setup.bash ```
 
 ### Watch ROS2 tutorial videos for futher help
