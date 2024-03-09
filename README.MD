@@ -63,7 +63,7 @@ Desktop Install for ROS, RViz, demos, tutorials \
 ```sudo apt install ros-humble-desktop```
 
 ### Environment setup
-Replace ".bash" with your shell if you're not using bash
+Replace ".bash" with your shell if you're not using bash\
 Possible values are: setup.bash, setup.sh, setup.zsh
 ```source /opt/ros/humble/setup.bash ```
 
