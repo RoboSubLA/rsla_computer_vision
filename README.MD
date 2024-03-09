@@ -42,7 +42,7 @@ cd into your github directory\
 ```git add .```\
 ```git commit -m "[insert your commit comment]"```\
 ```git push origin```\
-
+if you need help (https://youtu.be/ueQs5pQ8ZMM)
 ## ROS2 Installation 
 todo
 
