@@ -39,7 +39,7 @@ assuming you have github desktop version and have your github linked to this rep
 
 copy paste all files from "yolov7" folder into your github directory\
 cd into your github directory\
-``` git add .```\
+```git add .```\
 ```git commit -m "[insert your commit comment"```\
 ```git push origin```\
 
