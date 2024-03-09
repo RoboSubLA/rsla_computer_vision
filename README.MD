@@ -29,19 +29,19 @@ There are many ways to run but using google colab is the simplest.
 You can run the same command on your UBUNTU terminal, assuming you have CUDA, PYTHON3, your weights, and test images installed on your local device
 
 ### BEFORE YOU RUN THIS CODE
-make sure you are using the correct path from YOUR trained model and testing on your uploaded images from YOUR path in your google drive 
+make sure you are using the correct path from YOUR trained model and testing on your uploaded images from YOUR path in your google drive \
 ```!python detect.py --weights /content/gdrive/MyDrive/yolov7/runs/train/exp2/weights/best.pt --conf 0.1 --source /content/gdrive/MyDrive/yolov7/Trash-5/test/images```
 
 
 ## clone yolov7 
-there may be other ways to do it but download the repo from https://github.com/WongKinYiu/yolov7
-assuming you have github desktop version and have your github linked to this repo and GIT installed https://git-scm.com/downloads
+there may be other ways to do it but download the repo from https://github.com/WongKinYiu/yolov7\
+assuming you have github desktop version and have your github linked to this repo and GIT installed https://git-scm.com/downloads\
 
-copy paste all files from "yolov7" folder into your github directory 
-cd into your github directory
-``` git add .```
-```git commit -m "[insert your commit comment"```
-```git push origin```
+copy paste all files from "yolov7" folder into your github directory\
+cd into your github directory\
+``` git add .```\
+```git commit -m "[insert your commit comment"```\
+```git push origin```\
 
 ## ROS2 Installation 
 todo
