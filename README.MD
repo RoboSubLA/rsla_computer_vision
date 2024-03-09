@@ -43,15 +43,15 @@ cd into your github directory\
 ```git commit -m "[insert your commit comment]"```\
 ```git push origin```\
 if you need help [here](https://youtu.be/ueQs5pQ8ZMM)
+
 ## ROS2 Installation 
-```locale  # check for UTF-8
+```locale  # check for UTF-8``` \
+```sudo apt update && sudo apt install locales``` \
+```sudo locale-gen en_US en_US.UTF-8``` \
+```sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8``` \
+```export LANG=en_US.UTF-8``` \
+```locale  # verify settings``` \
 
-sudo apt update && sudo apt install locales
-sudo locale-gen en_US en_US.UTF-8
-sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
-export LANG=en_US.UTF-8
-
-locale  # verify settings```
 ```sudo apt install software-properties-common``` \
 ```sudo add-apt-repository universe``` \
 ```sudo apt update && sudo apt install curl -y
