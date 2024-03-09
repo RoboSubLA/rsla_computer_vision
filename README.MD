@@ -34,7 +34,7 @@ make sure you are using the correct path from YOUR trained model and testing on 
 
 
 ## clone yolov7 
-there may be other ways to do it but download the repo from https://github.com/WongKinYiu/yolov7\
+There may be other ways to do it but download the repo from https://github.com/WongKinYiu/yolov7 \
 assuming you have github desktop version and have your github linked to this repo and GIT installed https://git-scm.com/downloads\
 
 copy paste all files from "yolov7" folder into your github directory\
