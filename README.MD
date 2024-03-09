@@ -50,7 +50,7 @@ if you need help [here](https://youtu.be/ueQs5pQ8ZMM)
 ```sudo locale-gen en_US en_US.UTF-8``` \
 ```sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8``` \
 ```export LANG=en_US.UTF-8``` \
-```locale  # verify settings``` \
+```locale  # verify settings```
 
 ```sudo apt install software-properties-common``` \
 ```sudo add-apt-repository universe``` \
@@ -63,9 +63,9 @@ Desktop Install for ROS, RViz, demos, tutorials \
 ```sudo apt install ros-humble-desktop```
 
 ### Environment setup
-```# Replace ".bash" with your shell if you're not using bash
+``` # Replace ".bash" with your shell if you're not using bash
 # Possible values are: setup.bash, setup.sh, setup.zsh
-source /opt/ros/humble/setup.bash```
+source /opt/ros/humble/setup.bash ```
 
 ### Watch ROS2 tutorial videos for futher help
 [YOUTUBE](https://www.youtube.com/@RoboticsBackEnd)
