@@ -36,4 +36,5 @@ make sure you are using the correct path from YOUR trained model and testing on 
 todo
 
 ## CV ROS2 Node
-todo
+todo is the thing we need todo
+
