@@ -18,11 +18,11 @@ Now that we have our images and annotations added, we can Generate a Dataset Ver
 ## Step 5: Exporting dataset
 Once the dataset version is generated, we have a hosted dataset we can load directly into our notebook for easy training. Click Export and select the YOLO v5 PyTorch dataset format.
 ![](https://camo.githubusercontent.com/bda73b306551a545469d21838128066bb42d3e9cf403b756aac2620ed90a840c/68747470733a2f2f6d656469612e726f626f666c6f772e636f6d2f707265706172696e672d637573746f6d2d646174617365742d6578616d706c652f6578706f72742e6769663f696b2d73646b2d76657273696f6e3d6a6176617363726970742d312e342e33267570646174656441743d31363732393433333133373039)
-sources:https://github.com/roboflow/notebooks/blob/main/notebooks/train-yolov7-object-detection-on-custom-data.ipynb
+sources: https://github.com/roboflow/notebooks/blob/main/notebooks/train-yolov7-object-detection-on-custom-data.ipynb
 
 ## Using TrainYOLOV7 in Google Colab
 download file and open on YOUR google colab account
-https://store.augmentedstartups.com/605618c8-d8c8-4a25-be71-852308115520
+[HERE](https://store.augmentedstartups.com/605618c8-d8c8-4a25-be71-852308115520)
 
 ## Running YOLOV7 on custom trained dataset 
 There are many ways to run but using google colab is the simplest.
@@ -34,15 +34,15 @@ make sure you are using the correct path from YOUR trained model and testing on 
 
 
 ## clone yolov7 
-There may be other ways to do it but download the repo from https://github.com/WongKinYiu/yolov7 \
-assuming you have github desktop version and have your github linked to this repo and GIT installed https://git-scm.com/downloads
+There may be other ways to do it but download the repo from [yolo](https://github.com/WongKinYiu/yolov7) \
+assuming you have github desktop version and have your github linked to this repo and GIT installed [git](https://git-scm.com/downloads)
 
 copy paste all files from "yolov7" folder into a new folder (for organizational purposes) your github directory\
 cd into your github directory\
 ```git add .```\
 ```git commit -m "[insert your commit comment]"```\
 ```git push origin```\
-if you need help (https://youtu.be/ueQs5pQ8ZMM)
+if you need help [here](https://youtu.be/ueQs5pQ8ZMM)
 ## ROS2 Installation 
 todo
 
