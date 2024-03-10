@@ -62,12 +62,12 @@ if you need help [here](https://youtu.be/ueQs5pQ8ZMM)
 ```sudo apt update``` \
 ```sudo apt upgrade``` \
 Desktop Install for ROS, RViz, demos, tutorials \
-```sudo apt install ros-humble-desktop```
+```sudo apt install ros-iron-desktop```
 
 ### Environment setup
 Replace ".bash" with your shell if you're not using bash\
 Possible values are: setup.bash, setup.sh, setup.zsh\
-```source /opt/ros/humble/setup.bash ```
+```source /opt/ros/iron/setup.bash ```
 
 ### Watch ROS2 tutorial videos for futher help
 [YOUTUBE](https://www.youtube.com/@RoboticsBackEnd)
