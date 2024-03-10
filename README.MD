@@ -82,28 +82,27 @@ Possible values are: setup.bash, setup.sh, setup.zsh\
 `source ~/ros2_ws/install/setup.bash`
 
 ### Creating a package
-`cd ros2_ws`
-`cd src`
-`ros2 pkg create wailord_cv --build-type ament_python --dependencies rclpy`
-`cd ..`
-`colcon build`
+`cd ros2_ws` \
+`cd src` \
+`ros2 pkg create wailord_cv --build-type ament_python --dependencies rclpy` \
+`cd ..` \
+`colcon build` \
 
-python packages
+python packages \
 `pip3 list` \
 `pip3 list | grep setuptools` \
 downgrade to 58.0.2 if things arent working correctly \
 `pip3 install setuptools==58.2.0`
 run `colcon build` again
 
-`cd ..`
-`cd src`
-`cd wailord_cv`
-`cd wailord_cv` yes twice \
-`touch my_first_node.py`
-make it runnable
-`chmod +x my_first_node.py`
+`cd ..` \
+`cd src` \
+`cd wailord_cv` \
+`cd wailord_cv` #yes twice \
+`touch my_first_node.py`\
+make it runnable `chmod +x my_first_node.py`
 
-update node in vscode
+update node in vscode\
 ```  #!/usr/bin/python3
 import rclpy
 from rclpy.node import Node
