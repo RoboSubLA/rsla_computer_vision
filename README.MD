@@ -131,6 +131,6 @@ if __name__== '__main__':
 cd into the directory and run node 
 `./my_first_node.py` \
 
-CONGRATULATIONS YOU DID IT 
+TO BE CONTINUED...
 
 
