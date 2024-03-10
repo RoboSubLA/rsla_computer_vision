@@ -141,7 +141,7 @@ entry_points={
 ```
 Go to workspace directory \
 `colcon build` \
-`source ~/.bashrc` \
+`source install/setup.bash` \
 `ros2 run wailord_cv test_node `
 
 CONGRATULATION YOU MADE YOUR FIRST NODE
