@@ -126,7 +126,8 @@ def main(args=None):
 
 
 if __name__== '__main__':
-    main()```
+    main() 
+```
 
 cd into the directory and run node 
 `./my_first_node.py`
