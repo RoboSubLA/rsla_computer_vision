@@ -131,6 +131,18 @@ if __name__== '__main__':
 cd into the directory and run node 
 `./my_first_node.py` \
 
-TO BE CONTINUED...
+### update setup.py
+```
+entry_points={
+        'console_scripts': [
+            "test_node = wailord_cv.my_first_node:main"
+        ],
+    }
+```
+Go to workspace directory 
+`colcon build` \
+`source ~/.bashrc` \
+`ros2 run wailord_cv test_node `\
 
+CONGRATULATION YOU MADE YOUR FIRST NODE
 
