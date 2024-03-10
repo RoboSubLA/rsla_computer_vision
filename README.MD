@@ -74,5 +74,62 @@ Possible values are: setup.bash, setup.sh, setup.zsh\
 
 
 ## CV ROS2 Node
-todo is the thing we need todo
+
+`mkdir ros2_CV`
+`cd ros2_CV`
+`mkdir src`
+`colcon build`
+`source ~/ros2_ws/install/setup.bash`
+
+### Creating a package
+`cd ros2_ws`
+`cd src`
+`ros2 pkg create wailord_cv --build-type ament_python --dependencies rclpy`
+`cd ..`
+`colcon build`
+
+python packages
+`pip3 list` \
+`pip3 list | grep setuptools` \
+downgrade to 58.0.2 if things arent working correctly \
+`pip3 install setuptools==58.2.0`
+run `colcon build` again
+
+`cd ..`
+`cd src`
+`cd wailord_cv`
+`cd wailord_cv` yes twice \
+`touch my_first_node.py`
+make it runnable
+`chmod +x my_first_node.py`
+
+update node in vscode
+```  #!/usr/bin/python3
+import rclpy
+from rclpy.node import Node
+
+class MyNode(Node):
+
+    def __init__(self):
+        super().__init__("first_node")
+        self.get_logger().info("Hello from ROS2")
+
+def main(args=None):
+    #initialize ros2 features
+    rclpy.init(args=args)
+    
+    #initialize node
+    node = MyNode()
+    
+    
+    rclpy.shutdown()
+
+
+if __name__== '__main__':
+    main()```
+
+cd into the directory and run node 
+`./my_first_node.py`
+CONGRADULATIONS YOU DID IT 
+
 
