@@ -11,7 +11,7 @@ If you drag and drop a directory with a dataset in a supported format, the Robof
 ## Step 3: Labeling
 If you only have images, you can label them in Roboflow Annotate.
 ![]
-(https://ibb.co/nM8GC9D][img]https://i.ibb.co/m5Fj8kH/Screenshot-2024-03-11-151736.jpg)
+(https://i.ibb.co/m5Fj8kH/Screenshot-2024-03-11-151736.jpg)
 ## Step 4: Generate new dataset version
 Now that we have our images and annotations added, we can Generate a Dataset Version. When Generating a Version, you may elect to add preprocessing and augmentations. This step is completely optional, however, it can allow you to significantly improve the robustness of your model.
 
