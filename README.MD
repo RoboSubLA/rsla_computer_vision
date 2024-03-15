@@ -75,11 +75,12 @@ Possible values are: setup.bash, setup.sh, setup.zsh\
 
 
 ## CV ROS2 Node
-
-`mkdir ros2_CV`
-`cd ros2_CV`
-`mkdir src`
-`colcon build`
+This is an example to work on your LOCAL computer\
+to clone and update the github will be a slightly different processs\
+`mkdir ros2_cv`\
+`cd ros2_cv`\
+`mkdir src`\
+`colcon build`\
 `source ~/ros2_ws/install/setup.bash`
 
 ### Creating a package
