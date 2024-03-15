@@ -149,5 +149,6 @@ CONGRATULATION YOU MADE YOUR FIRST NODE
 
 important commands for subscriber \
 `ros2 topic list` for looking up commands \
-`ros2 topic info` for looking up type ______ 
+`ros2 topic info ______` insert type, for looking up type \
+`ros2 interface show _____` insert type, for looking up cmds
 
