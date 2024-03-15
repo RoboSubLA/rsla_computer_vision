@@ -147,3 +147,7 @@ Go to workspace directory \
 
 CONGRATULATION YOU MADE YOUR FIRST NODE
 
+important commands for subscriber \
+`ros2 topic list` for looking up commands \
+`ros2 topic info` for looking up type \
+
