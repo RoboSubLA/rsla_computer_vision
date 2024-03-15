@@ -144,9 +144,9 @@ Go to workspace directory \
 `colcon build` \
 
 you need to use your path and edit it in bashrc so your ros packages work on every terminal \
-and you dont have to source your setup.bash in everytime you open a new terminal\
-`source ~/install/setup.bash`\ 
-`ros2 run wailord_cv test_node `
+and you dont have to source your setup.bash in everytime you open a new terminal \
+`source ~/install/setup.bash` \
+`ros2 run wailord_cv test_node`
 
 CONGRATULATION YOU MADE YOUR FIRST NODE \
 commands for making new python files and making them executable, example py file name "pose_subscriber" \
