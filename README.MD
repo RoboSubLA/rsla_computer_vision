@@ -146,6 +146,10 @@ Go to workspace directory \
 `ros2 run wailord_cv test_node `
 
 CONGRATULATION YOU MADE YOUR FIRST NODE
+commands for making new python files and making them executable, example py file name "pose_subscriber"
+`touch pose_subscriber.py` \
+`chmod +x pose_subscriber.py`
+
 
 important commands for subscriber \
 `ros2 topic list` for looking up commands \
