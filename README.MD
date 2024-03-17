@@ -10,6 +10,7 @@ If you drag and drop a directory with a dataset in a supported format, the Robof
 
 ## Step 3: Labeling
 If you only have images, you can label them in Roboflow Annotate.
+For best accuracy, annotate the image as close to its borders as possible, otherwise, the model will train on background pixels.
 ![](https://i.ibb.co/m5Fj8kH/Screenshot-2024-03-11-151736.jpg)
 
 ## Step 4: Generate new dataset version
