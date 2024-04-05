@@ -155,6 +155,12 @@ commands for making new python files and making them executable, example py file
 `touch pose_subscriber.py` \
 `chmod +x pose_subscriber.py`
 
+PACKAGES NEEDED \
+`pip install torch torchvision torchaudio`\
+`pip install opencv-python-headless`\
+`pip install opencv-python-headless`
+
+
 
 important commands for subscriber \
 `ros2 topic list` for looking up commands \
