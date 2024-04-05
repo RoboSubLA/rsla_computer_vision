@@ -1,0 +1,120 @@
+running egg_info
+creating ../../build/ros2_cv/ros2_cv.egg-info
+writing ../../build/ros2_cv/ros2_cv.egg-info/PKG-INFO
+writing dependency_links to ../../build/ros2_cv/ros2_cv.egg-info/dependency_links.txt
+writing entry points to ../../build/ros2_cv/ros2_cv.egg-info/entry_points.txt
+writing requirements to ../../build/ros2_cv/ros2_cv.egg-info/requires.txt
+writing top-level names to ../../build/ros2_cv/ros2_cv.egg-info/top_level.txt
+writing manifest file '../../build/ros2_cv/ros2_cv.egg-info/SOURCES.txt'
+reading manifest file '../../build/ros2_cv/ros2_cv.egg-info/SOURCES.txt'
+writing manifest file '../../build/ros2_cv/ros2_cv.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv
+copying ros2_cv/train.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv
+copying ros2_cv/train_aux.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv
+copying ros2_cv/__init__.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv
+copying ros2_cv/test.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv
+copying ros2_cv/hubconf.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv
+copying ros2_cv/detect.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv
+copying ros2_cv/export.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils
+copying ros2_cv/utils/loss.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils
+copying ros2_cv/utils/ros.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils
+copying ros2_cv/utils/__init__.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils
+copying ros2_cv/utils/metrics.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils
+copying ros2_cv/utils/google_utils.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils
+copying ros2_cv/utils/autoanchor.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils
+copying ros2_cv/utils/add_nms.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils
+copying ros2_cv/utils/datasets.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils
+copying ros2_cv/utils/plots.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils
+copying ros2_cv/utils/activations.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils
+copying ros2_cv/utils/general.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils
+copying ros2_cv/utils/torch_utils.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/models
+copying ros2_cv/models/yolo.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/models
+copying ros2_cv/models/__init__.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/models
+copying ros2_cv/models/common.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/models
+copying ros2_cv/models/experimental.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/models
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils/wandb_logging
+copying ros2_cv/utils/wandb_logging/__init__.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils/wandb_logging
+copying ros2_cv/utils/wandb_logging/wandb_utils.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils/wandb_logging
+copying ros2_cv/utils/wandb_logging/log_dataset.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils/wandb_logging
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils/aws
+copying ros2_cv/utils/aws/__init__.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils/aws
+copying ros2_cv/utils/aws/resume.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils/aws
+running install
+running install_lib
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/train.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/train_aux.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/__init__.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/test.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/hubconf.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/detect.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/export.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils/loss.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils/wandb_logging
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils/wandb_logging/__init__.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils/wandb_logging
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils/wandb_logging/wandb_utils.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils/wandb_logging
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils/wandb_logging/log_dataset.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils/wandb_logging
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils/ros.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils/__init__.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils/metrics.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils/google_utils.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils/autoanchor.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils/aws
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils/aws/__init__.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils/aws
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils/aws/resume.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils/aws
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils/add_nms.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils/datasets.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils/plots.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils/activations.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils/general.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/utils/torch_utils.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/models
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/models/yolo.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/models
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/models/__init__.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/models
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/models/common.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/models
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/ros2_cv/models/experimental.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/models
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/train.py to train.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/train_aux.py to train_aux.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/test.py to test.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/hubconf.py to hubconf.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/detect.py to detect.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/export.py to export.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils/loss.py to loss.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils/wandb_logging/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils/wandb_logging/wandb_utils.py to wandb_utils.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils/wandb_logging/log_dataset.py to log_dataset.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils/ros.py to ros.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils/metrics.py to metrics.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils/google_utils.py to google_utils.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils/autoanchor.py to autoanchor.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils/aws/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils/aws/resume.py to resume.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils/add_nms.py to add_nms.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils/datasets.py to datasets.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils/plots.py to plots.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils/activations.py to activations.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils/general.py to general.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/utils/torch_utils.py to torch_utils.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/models/yolo.py to yolo.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/models/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/models/common.py to common.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv/models/experimental.py to experimental.cpython-310.pyc
+running install_data
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/share/ament_index
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/share/ament_index/resource_index
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/share/ament_index/resource_index/packages
+copying resource/ros2_cv -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/share/ament_index/resource_index/packages
+copying package.xml -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/share/ros2_cv
+running install_egg_info
+Copying ../../build/ros2_cv/ros2_cv.egg-info to /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/ros2_cv-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/install.log'
