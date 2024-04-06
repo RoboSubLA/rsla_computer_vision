@@ -1,0 +1,14 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages",
+        "/home/justin/ros2_ws/build/wailord_cv",
+        "/home/justin/ros2_ws/install/wailord_cv/lib/python3.10/site-packages",
+        "/opt/ros/iron/lib/python3.10/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages",
+        "/home/justin/ros2_ws/build/wailord_cv",
+        "/home/justin/ros2_ws/install/wailord_cv/lib/python3.10/site-packages",
+        "/opt/ros/iron/lib/python3.10/site-packages"
+    ]
+}
