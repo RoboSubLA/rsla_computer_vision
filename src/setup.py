@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'ros2_cv'
+package_name = 'cv'
 
 setup(
     name=package_name,
