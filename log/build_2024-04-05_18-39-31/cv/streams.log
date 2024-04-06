@@ -1,0 +1,23 @@
+[0.613s] Invoking command in '/home/justin/Documents/GitHub/rsla_Computer_Vision/src/cv': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/prefix_override:/home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/cv build --build-base /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build install --record /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/install.log --single-version-externally-managed
+[0.804s] running egg_info
+[0.805s] writing ../../build/cv/cv.egg-info/PKG-INFO
+[0.805s] writing dependency_links to ../../build/cv/cv.egg-info/dependency_links.txt
+[0.805s] writing entry points to ../../build/cv/cv.egg-info/entry_points.txt
+[0.806s] writing requirements to ../../build/cv/cv.egg-info/requires.txt
+[0.806s] writing top-level names to ../../build/cv/cv.egg-info/top_level.txt
+[0.807s] reading manifest file '../../build/cv/cv.egg-info/SOURCES.txt'
+[0.808s] writing manifest file '../../build/cv/cv.egg-info/SOURCES.txt'
+[0.808s] running build
+[0.808s] running build_py
+[0.810s] running install
+[0.810s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.810s]   warnings.warn(
+[0.810s] running install_lib
+[0.811s] running install_data
+[0.812s] running install_egg_info
+[0.813s] removing '/home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/cv-0.0.0-py3.10.egg-info' (and everything under it)
+[0.813s] Copying ../../build/cv/cv.egg-info to /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/cv-0.0.0-py3.10.egg-info
+[0.814s] running install_scripts
+[0.831s] Installing cv script to /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/cv
+[0.832s] writing list of installed files to '/home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/install.log'
+[0.847s] Invoked command in '/home/justin/Documents/GitHub/rsla_Computer_Vision/src/cv' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/prefix_override:/home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/cv build --build-base /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build install --record /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/install.log --single-version-externally-managed
