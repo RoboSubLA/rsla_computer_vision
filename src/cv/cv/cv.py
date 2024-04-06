@@ -18,7 +18,7 @@ class ObjectDetection(Node):
     def __init__(self):
         super().__init__("ObjectDetection")
         # Parameters
-        self.declare_parameter("weights", "chevron.pt", ParameterDescriptor(description="Weights file"))
+        self.declare_parameter("weights", "yolov7.pt", ParameterDescriptor(description="Weights file"))
         self.declare_parameter("conf_thres", 0.25, ParameterDescriptor(description="Confidence threshold"))
         self.declare_parameter("iou_thres", 0.45, ParameterDescriptor(description="IOU threshold"))
         self.declare_parameter("device", "cpu", ParameterDescriptor(description="Name of the device"))
