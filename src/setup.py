@@ -10,6 +10,13 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        ('lib/' + package_name + '/models/',['models/experimental.py', 'models/common.py',
+                                             'models/yolo.py']),
+        ('lib/' + package_name + '/utils/',['utils/general.py', 'utils/torch_utils.py',
+                                             'utils/plots.py', 'utils/datasets.py',
+                                             'utils/google_utils.py', 'utils/activations.py',
+                                             'utils/add_nms.py', 'utils/autoanchor.py',
+                                             'utils/loss.py', 'utils/metrics.py']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -20,6 +27,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'cv = cv.cv:main'
         ],
     },
 )
