@@ -1,0 +1,47 @@
+[0.695s] Invoking command in '/home/justin/Documents/GitHub/rsla_Computer_Vision/src': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/prefix_override:/home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/ros2_cv build --build-base /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build install --record /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/install.log --single-version-externally-managed
+[0.932s] running egg_info
+[0.932s] creating ../build/ros2_cv/ros2_cv.egg-info
+[0.933s] writing ../build/ros2_cv/ros2_cv.egg-info/PKG-INFO
+[0.933s] writing dependency_links to ../build/ros2_cv/ros2_cv.egg-info/dependency_links.txt
+[0.933s] writing entry points to ../build/ros2_cv/ros2_cv.egg-info/entry_points.txt
+[0.933s] writing requirements to ../build/ros2_cv/ros2_cv.egg-info/requires.txt
+[0.933s] writing top-level names to ../build/ros2_cv/ros2_cv.egg-info/top_level.txt
+[0.933s] writing manifest file '../build/ros2_cv/ros2_cv.egg-info/SOURCES.txt'
+[0.935s] reading manifest file '../build/ros2_cv/ros2_cv.egg-info/SOURCES.txt'
+[0.935s] writing manifest file '../build/ros2_cv/ros2_cv.egg-info/SOURCES.txt'
+[0.935s] running build
+[0.936s] running build_py
+[0.936s] creating /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build
+[0.936s] creating /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib
+[0.936s] creating /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/cv
+[0.936s] copying cv/__init__.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/cv
+[0.936s] copying cv/cv.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/cv
+[0.936s] creating /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/models
+[0.937s] copying models/yolo.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/models
+[0.937s] copying models/__init__.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/models
+[0.937s] copying models/common.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/models
+[0.937s] copying models/experimental.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/models
+[0.937s] running install
+[0.937s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.937s]   warnings.warn(
+[0.937s] running install_lib
+[0.938s] creating /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/cv
+[0.938s] copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/cv/__init__.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/cv
+[0.938s] copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/cv/cv.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/cv
+[0.939s] creating /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/models
+[0.939s] copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/models/yolo.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/models
+[0.939s] copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/models/__init__.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/models
+[0.939s] copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/models/common.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/models
+[0.939s] copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/models/experimental.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/models
+[0.939s] byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/cv/__init__.py to __init__.cpython-310.pyc
+[0.940s] byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/cv/cv.py to cv.cpython-310.pyc
+[0.941s] byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/models/yolo.py to yolo.cpython-310.pyc
+[0.948s] byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/models/__init__.py to __init__.cpython-310.pyc
+[0.948s] byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/models/common.py to common.cpython-310.pyc
+[0.961s] byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages/models/experimental.py to experimental.cpython-310.pyc
+[0.963s] running install_data
+[0.963s] creating /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/share/ament_index
+[0.963s] creating /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/share/ament_index/resource_index
+[0.963s] creating /home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/share/ament_index/resource_index/packages
+[0.963s] error: can't copy 'resource/ros2_cv': doesn't exist or not a regular file
+[0.978s] Invoked command in '/home/justin/Documents/GitHub/rsla_Computer_Vision/src' returned '1': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/prefix_override:/home/justin/Documents/GitHub/rsla_Computer_Vision/install/ros2_cv/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/ros2_cv build --build-base /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build install --record /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/install.log --single-version-externally-managed

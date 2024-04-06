@@ -1,0 +1,25 @@
+running egg_info
+creating ../build/ros2_cv/ros2_cv.egg-info
+writing ../build/ros2_cv/ros2_cv.egg-info/PKG-INFO
+writing dependency_links to ../build/ros2_cv/ros2_cv.egg-info/dependency_links.txt
+writing entry points to ../build/ros2_cv/ros2_cv.egg-info/entry_points.txt
+writing requirements to ../build/ros2_cv/ros2_cv.egg-info/requires.txt
+writing top-level names to ../build/ros2_cv/ros2_cv.egg-info/top_level.txt
+writing manifest file '../build/ros2_cv/ros2_cv.egg-info/SOURCES.txt'
+reading manifest file '../build/ros2_cv/ros2_cv.egg-info/SOURCES.txt'
+writing manifest file '../build/ros2_cv/ros2_cv.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/cv
+copying cv/__init__.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/cv
+copying cv/cv.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/cv
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/models
+copying models/yolo.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/models
+copying models/__init__.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/models
+copying models/common.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/models
+copying models/experimental.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/ros2_cv/build/lib/models
+running install
+running install_lib
+running install_data
