@@ -1,0 +1,106 @@
+running egg_info
+writing ../../build/cv/cv.egg-info/PKG-INFO
+writing dependency_links to ../../build/cv/cv.egg-info/dependency_links.txt
+writing entry points to ../../build/cv/cv.egg-info/entry_points.txt
+writing requirements to ../../build/cv/cv.egg-info/requires.txt
+writing top-level names to ../../build/cv/cv.egg-info/top_level.txt
+reading manifest file '../../build/cv/cv.egg-info/SOURCES.txt'
+writing manifest file '../../build/cv/cv.egg-info/SOURCES.txt'
+running build
+running build_py
+copying cv/cv.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/cv
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils
+copying utils/loss.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils
+copying utils/__init__.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils
+copying utils/metrics.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils
+copying utils/google_utils.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils
+copying utils/autoanchor.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils
+copying utils/add_nms.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils
+copying utils/datasets.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils
+copying utils/plots.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils
+copying utils/activations.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils
+copying utils/general.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils
+copying utils/torch_utils.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/models
+copying models/yolo.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/models
+copying models/__init__.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/models
+copying models/common.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/models
+copying models/experimental.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/models
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils/wandb_logging
+copying utils/wandb_logging/__init__.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils/wandb_logging
+copying utils/wandb_logging/wandb_utils.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils/wandb_logging
+copying utils/wandb_logging/log_dataset.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils/wandb_logging
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils/aws
+copying utils/aws/__init__.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils/aws
+copying utils/aws/resume.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils/aws
+running install
+running install_lib
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/cv/cv.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/cv
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils/loss.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils/wandb_logging
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils/wandb_logging/__init__.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils/wandb_logging
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils/wandb_logging/wandb_utils.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils/wandb_logging
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils/wandb_logging/log_dataset.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils/wandb_logging
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils/__init__.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils/metrics.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils/google_utils.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils/autoanchor.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils/aws
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils/aws/__init__.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils/aws
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils/aws/resume.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils/aws
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils/add_nms.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils/datasets.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils/plots.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils/activations.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils/general.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/utils/torch_utils.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/models
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/models/yolo.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/models
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/models/__init__.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/models
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/models/common.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/models
+copying /home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/build/lib/models/experimental.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/models
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/cv/cv.py to cv.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils/loss.py to loss.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils/wandb_logging/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils/wandb_logging/wandb_utils.py to wandb_utils.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils/wandb_logging/log_dataset.py to log_dataset.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils/metrics.py to metrics.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils/google_utils.py to google_utils.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils/autoanchor.py to autoanchor.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils/aws/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils/aws/resume.py to resume.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils/add_nms.py to add_nms.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils/datasets.py to datasets.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils/plots.py to plots.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils/activations.py to activations.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils/general.py to general.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/utils/torch_utils.py to torch_utils.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/models/yolo.py to yolo.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/models/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/models/common.py to common.cpython-310.pyc
+byte-compiling /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/models/experimental.py to experimental.cpython-310.pyc
+running install_data
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/cv
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/cv/models
+copying models/experimental.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/cv/models/
+copying models/common.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/cv/models/
+copying models/yolo.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/cv/models/
+creating /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/cv/utils
+copying utils/general.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/cv/utils/
+copying utils/torch_utils.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/cv/utils/
+copying utils/plots.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/cv/utils/
+copying utils/datasets.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/cv/utils/
+copying utils/google_utils.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/cv/utils/
+copying utils/activations.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/cv/utils/
+copying utils/add_nms.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/cv/utils/
+copying utils/autoanchor.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/cv/utils/
+copying utils/loss.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/cv/utils/
+copying utils/metrics.py -> /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/cv/utils/
+running install_egg_info
+removing '/home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/cv-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/cv/cv.egg-info to /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/python3.10/site-packages/cv-0.0.0-py3.10.egg-info
+running install_scripts
+Installing cv script to /home/justin/Documents/GitHub/rsla_Computer_Vision/install/cv/lib/cv
+writing list of installed files to '/home/justin/Documents/GitHub/rsla_Computer_Vision/build/cv/install.log'
