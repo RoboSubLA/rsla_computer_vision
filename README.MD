@@ -143,7 +143,7 @@ entry_points={
     }
 ```
 Go to workspace directory \
-`colcon build` \
+`colcon build` 
 
 you need to use your path and edit it in bashrc so your ros packages work on every terminal \
 and you dont have to source your setup.bash in everytime you open a new terminal \
