@@ -89,7 +89,7 @@ to clone and update the github will be a slightly different processs\
 `cd src` \
 `ros2 pkg create wailord_cv --build-type ament_python --dependencies rclpy` \
 `cd ..` \
-`colcon build` \
+`colcon build` 
 
 python packages \
 `pip3 list` \
