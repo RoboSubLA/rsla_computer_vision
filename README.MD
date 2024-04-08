@@ -157,7 +157,7 @@ commands for making new python files and making them executable, example py file
 
 PACKAGES NEEDED \
 `pip install torch torchvision torchaudio`\
-`pip install opencv-python-headless`\
+`pip install opencv-python-headless`
 
 
 
