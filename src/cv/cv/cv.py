@@ -43,7 +43,7 @@ def draw_detections(img: np.array, bboxes: List[List[int]], classes: List[int],
 
 class ObjectDetection(Node):
     def __init__(self):
-        super().__init__("yolov7_node") 
+        super().__init__("cv") 
 
         self.declare_parameter("weights", "best.pt", ParameterDescriptor(description="Weights file"))
         self.declare_parameter("conf_thres", 0.25, ParameterDescriptor(description="Confidence threshold"))
