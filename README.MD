@@ -89,7 +89,7 @@ to clone and update the github will be a slightly different processs\
 `cd src` \
 `ros2 pkg create wailord_cv --build-type ament_python --dependencies rclpy` \
 `cd ..` \
-`colcon build` \
+`colcon build` 
 
 python packages \
 `pip3 list` \
@@ -143,7 +143,7 @@ entry_points={
     }
 ```
 Go to workspace directory \
-`colcon build` \
+`colcon build` 
 
 you need to use your path and edit it in bashrc so your ros packages work on every terminal \
 and you dont have to source your setup.bash in everytime you open a new terminal \
@@ -157,7 +157,6 @@ commands for making new python files and making them executable, example py file
 
 PACKAGES NEEDED \
 `pip install torch torchvision torchaudio`\
-`pip install opencv-python-headless`\
 `pip install opencv-python-headless`
 
 
