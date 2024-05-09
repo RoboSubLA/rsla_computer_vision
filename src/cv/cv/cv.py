@@ -1,185 +1,157 @@
+import os
 import rclpy
 from rclpy.node import Node
 from rcl_interfaces.msg import ParameterDescriptor
-from geometry_msgs.msg import Point
-import cv2
-import torch
-import numpy as np
-from sensor_msgs.msg import Image, CompressedImage, CameraInfo
+from sensor_msgs.msg import Image
+from vision_msgs.msg import Detection2DArray, Detection2D, BoundingBox2D, \
+    ObjectHypothesisWithPose, Pose2D
 from cv_bridge import CvBridge
 from models.experimental import attempt_load
-from utils.general import check_img_size, non_max_suppression, scale_coords, \
-    strip_optimizer, set_logging, increment_path
-from utils.plots import plot_one_box
-from utils.torch_utils import select_device, load_classifier, time_synchronized,\
-    TracedModel
+from utils.general import non_max_suppression
+import torch
+import cv2
+import numpy as np
+from typing import List, Union
+
+
+def get_random_color(seed):
+    gen = np.random.default_rng(seed)
+    color = tuple(gen.choice(range(256), size=3))
+    color = tuple([int(c) for c in color])
+    return color
+
+def draw_detections(img: np.array, bboxes: List[List[int]], classes: List[int],
+                    class_labels: Union[List[str], None]) -> np.array:
+    for bbox, cls in zip(bboxes, classes):
+        x1, y1, x2, y2 = bbox
+        color = get_random_color(int(cls))
+        img = cv2.rectangle(
+            img, (int(x1), int(y1)), (int(x2), int(y2)), color, 3
+        )
+    
+        if class_labels:
+            label = class_labels[int(cls)]
+
+            x_text = int(x1)
+            y_text = max(15, int(y1 - 10))
+            img = cv2.putText(
+                img, label, (x_text, y_text), cv2.FONT_HERSHEY_SIMPLEX,
+                0.5, color, 1, cv2.LINE_AA
+            )
+
+    return img
 
 class ObjectDetection(Node):
     def __init__(self):
-        super().__init__("ObjectDetection")
-        # Parameters
+        super().__init__("yolov7_node") 
+
         self.declare_parameter("weights", "best.pt", ParameterDescriptor(description="Weights file"))
         self.declare_parameter("conf_thres", 0.25, ParameterDescriptor(description="Confidence threshold"))
         self.declare_parameter("iou_thres", 0.45, ParameterDescriptor(description="IOU threshold"))
-        self.declare_parameter("device", "cpu", ParameterDescriptor(description="Name of the device"))
+        self.declare_parameter("device", "cuda", ParameterDescriptor(description="Name of the device"))
         self.declare_parameter("img_size", 640, ParameterDescriptor(description="Image size"))
-        self.declare_parameter("use_RGB", True, ParameterDescriptor(description="Use webcam"))
-        self.declare_parameter("use_depth", False, ParameterDescriptor(description="Use depth camera"))
+        self.declare_parameter("visualize", True, ParameterDescriptor(description="Visualize detections"))
 
         self.weights = self.get_parameter("weights").get_parameter_value().string_value
         self.conf_thres = self.get_parameter("conf_thres").get_parameter_value().double_value
         self.iou_thres = self.get_parameter("iou_thres").get_parameter_value().double_value
         self.device = self.get_parameter("device").get_parameter_value().string_value
         self.img_size = self.get_parameter("img_size").get_parameter_value().integer_value
-        self.use_RGB = self.get_parameter("use_RGB").get_parameter_value().bool_value
-        self.use_depth = self.get_parameter("use_depth").get_parameter_value().bool_value
+        self.visualize = self.get_parameter("visualize").get_parameter_value().bool_value
 
-        # Camera info and frames
-        self.rgb_image = None
-
-        # Flags
-        self.camera_RGB = False
-
-        # Timer callback
-        self.frequency = 20  # Hz
-        self.timer = self.create_timer(1/self.frequency, self.timer_callback)
-
-        # Publishers for Classes
-        self.pub_person = self.create_publisher(Point, "/person", 10)
-        self.person = Point()
-
-        # Realsense package
         self.bridge = CvBridge()
-        
-        # Create a video capture object for webcam
-        self.cap = cv2.VideoCapture(0)  # Use the first webcam, change index if needed
+        self.model = attempt_load(self.weights, map_location=self.device).eval()
+        self.publisher = self.create_publisher(Detection2DArray, "yolov7_detections", 10)
+        if self.visualize:
+            self.visualization_publisher = self.create_publisher(Image, "yolov7_detections/visualization", 10)
 
-        # Initialize YOLOv7
-        set_logging()
-        self.device = select_device(self.device)
-        self.half = self.device.type != 'cpu'  # half precision only supported on CUDA
-        # Load model
-        self.model = attempt_load(self.weights, map_location=self.device) # load FP32 model
-        stride = int(self.model.stride.max())  # model stride
-        imgsz = check_img_size(self.img_size, s=stride)  # check img_size
-        if self.half:
-            self.model.half()  # to FP16
-        # Get names and colors
-        self.names = self.model.module.names if hasattr(self.model, 'module') else self.model.names
-        self.colors = [[np.random.randint(0, 255) for _ in range(3)] for _ in self.names
-                      ]
+        self.capture = cv2.VideoCapture(0)
+        self.timer = self.create_timer(1.0 / 30, self.timer_callback)
+    
+    def _preprocess_image(self, frame: np.ndarray) -> torch.Tensor:
+        h, w, _ = frame.shape
+        img = cv2.resize(frame, (self.img_size, self.img_size))
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        img_tensor = torch.from_numpy(img).permute(2, 0, 1).float().div(255.0).unsqueeze(0).to(self.device)
+        return img_tensor
 
-    def YOLOv7_detect(self):
-        """ Perform object detection with YOLOv7 using webcam feed """
-        ret, frame = self.cap.read()  # Read frame from webcam
+    def _detect_objects(self, img_tensor: torch.Tensor) -> torch.Tensor:
+        with torch.no_grad():
+            pred = self.model(img_tensor)[0]
+        detections = non_max_suppression(pred, self.conf_thres, self.iou_thres)[0]
+        return detections
+
+    def _create_detection_msg(self, img_msg: Image, detections: torch.Tensor) -> Detection2DArray:
+        detection_array_msg = Detection2DArray()
+        for detection in detections:
+            x1, y1, x2, y2, conf, cls = detection.tolist()
+            single_detection_msg = Detection2D()
+
+            # Convert the raw image data to a ROS Image message
+            img_ros_msg = self.bridge.cv2_to_imgmsg(img_msg, "bgr8")
+            single_detection_msg.source_img = img_ros_msg
+
+            # bbox
+            bbox = BoundingBox2D()
+            w = int(round(x2 - x1))
+            h = int(round(y2 - y1))
+            cx = int(round(x1 + w / 2))
+            cy = int(round(y1 + h / 2))
+            bbox.size_x = w
+            bbox.size_y = h
+
+            bbox.center = Pose2D()
+            bbox.center.x = cx
+            bbox.center.y = cy
+
+            single_detection_msg.bbox = bbox
+
+            # class id & confidence
+            obj_hyp = ObjectHypothesisWithPose()
+            obj_hyp.id = int(cls)
+            obj_hyp.score = conf
+            single_detection_msg.results = [obj_hyp]
+
+            detection_array_msg.detections.append(single_detection_msg)
+
+        return detection_array_msg
+
+    def timer_callback(self):
+        ret, frame = self.capture.read()
         if not ret:
             self.get_logger().warn("Failed to capture frame from webcam")
             return
 
-        # webcam frame processing
-        im0 = frame.copy()
-        img = frame[np.newaxis, :, :, :]
-        img = img[..., ::-1].transpose((0, 3, 1, 2))
-        img = np.ascontiguousarray(img)
-        img = torch.from_numpy(img).to(self.device)
-        img = img.half() if self.half else img.float()  # uint8 to fp16/32
-        img /= 255.0  # 0 - 255 to 0.0 - 1.0
-        if img.ndimension() == 3:
-            img = img.unsqueeze(0)
-        # Warmup
-        if self.device.type != 'cpu' and (self.old_img_b != img.shape[0] or self.old_img_h != img.shape[2] or self.old_img_w != img.shape[3]):
-            self.old_img_b = img.shape[0]
-            self.old_img_h = img.shape[2]
-            self.old_img_w = img.shape[3]
-            for i in range(3):
-                self.model(img)[0]
+        try:
+            # Preprocess the image for YOLOv7
+            img_tensor = self._preprocess_image(frame)
+            detections = self._detect_objects(img_tensor)
+            detection_msg = self._create_detection_msg(frame, detections)
+            self.publisher.publish(detection_msg)
 
-        # Inference
-        t1 = time_synchronized()
-        with torch.no_grad():   # Calculating gradients would cause a GPU memory leak
-            pred = self.model(img)[0]
-        t2 = time_synchronized()
+            if self.visualize:
+                bboxes = [[int(x1), int(y1), int(x2), int(y2)] for x1, y1, x2, y2 in detections[:, :4].tolist()]
+                classes = [int(cls) for cls in detections[:, 5].tolist()]
+                vis_img = draw_detections(frame, bboxes, classes, None)
+                vis_msg = self.bridge.cv2_to_imgmsg(vis_img)
+                self.visualization_publisher.publish(vis_msg)
 
-        # Apply NMS
-        pred = non_max_suppression(pred, self.conf_thres, self.iou_thres)
-        t3 = time_synchronized()
+            # Display the webcam feed
+            cv2.imshow('Webcam Feed', frame)
+            cv2.waitKey(1)  # Wait for a short time to refresh the display
 
-        # Process detections   
-        for i, det in enumerate(pred):  # detections per image
-            gn = torch.tensor(im0.shape)[[1, 0, 1, 0]]  # normalization gain whwh
-            if len(det):
-                # Rescale boxes from img_size to im0 size
-                det[:, :4] = scale_coords(img.shape[2:], det[:, :4], im0.shape).round()
-
-                # Print results
-                for c in det[:, -1].unique():
-                    n = (det[:, -1] == c).sum()  # detections per class
-
-                # Write results
-                for *xyxy, conf, cls in reversed(det):
-                    label = f'{self.names[int(cls)]} {conf:.2f}'
-
-                    if conf > 0.5: # Limit confidence threshold to 50% for all classes
-                        # Draw a boundary box around each object
-                        plot_one_box(xyxy, im0, label=label, color=self.colors[int(cls)], line_thickness=2)
-                        if self.use_depth == True:
-                            plot_one_box(xyxy, self.depth_color_map, label=label, color=self.colors[int(cls)], line_thickness=2)
-
-                            label_name = f'{self.names[int(cls)]}'
-    
-                            # Get box top left & bottom right coordinates
-                            c1, c2 = (int(xyxy[0]), int(xyxy[1])), (int(xyxy[2]), int(xyxy[3]))
-                            x = int((c2[0]+c1[0])/2)
-                            y = int((c2[1]+c1[1])/2)
-    
-                            # Limit location and distance of object to 480x680 and 5meters away
-                            if x < 480 and y < 640 and self.depth[x][y] < 5000:
-                                # Get depth using x,y coordinates value in the depth matrix
-                                if self.intr:
-                                    real_coords = rs.rs2_deproject_pixel_to_point(self.intr, [x, y], self.depth[x][y])
-
-                                if real_coords != [0.0,0.0,0.0]:
-                                    depth_scale = 0.001
-                                    # Choose label for publishing position Relative to camera frame
-                                    if label_name == 'person':
-                                        self.person.x = real_coords[0]*depth_scale
-                                        self.person.y = real_coords[1]*depth_scale
-                                        self.person.z = real_coords[2]*depth_scale # Depth
-                                        self.pub_person.publish(self.person)
-                                    if label_name == 'door':
-                                        self.door.x = real_coords[0]*depth_scale
-                                        self.door.y = real_coords[1]*depth_scale
-                                        self.door.z = real_coords[2]*depth_scale # Depth
-                                        self.pub_door.publish(self.door)
-                                    if label_name == 'stairs':
-                                        self.stairs.x = real_coords[0]*depth_scale
-                                        self.stairs.y = real_coords[1]*depth_scale
-                                        self.stairs.z = real_coords[2]*depth_scale # Depth
-                                        self.pub_stairs.publish(self.stairs)
-                                    self.get_logger().info(f"depth_coord = {real_coords[0]*depth_scale}  {real_coords[1]*depth_scale}  {real_coords[2]*depth_scale}")
-
-            cv2.imshow("YOLOv7 Object detection result RGB", cv2.resize(im0, None, fx=1.5, fy=1.5))
-            if self.use_depth == True:
-                cv2.imshow("YOLOv7 Object detection result Depth", cv2.resize(self.depth_color_map, None, fx=1.5, fy=1.5))
-            if cv2.waitKey(1) & 0xFF == ord('q'):
-                break
-
-
-    def timer_callback(self):
-        self.YOLOv7_detect()
+        except Exception as e:
+            self.get_logger().error(f"Error processing frame: {e}")
 
     def __del__(self):
-        # Release the video capture object when the node is destroyed
-        if self.cap.isOpened():
-            self.cap.release()
+        if self.capture.isOpened():
+            self.capture.release()
 
 def main(args=None):
-    """Run the main function."""
     rclpy.init(args=args)
-    with torch.no_grad():
-        node = ObjectDetection()
-        rclpy.spin(node)
-        rclpy.shutdown()
+    node = ObjectDetection()
+    rclpy.spin(node)
+    rclpy.shutdown()
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
